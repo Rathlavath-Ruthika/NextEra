@@ -1,73 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AI Sales & Marketing Assistant</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<title>MarketAI Suite</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
 
-<h1>AI Sales & Marketing Intelligence</h1>
+<div class="navbar">
+<div>MarketAI Suite</div>
+<div>
+<a href="/">Home</a>
+<a href="/campaign">Campaign</a>
+<a href="/pitch">Pitch</a>
+<a href="/lead">Lead Score</a>
+</div>
+</div>
 
-<!-- Campaign Generator -->
-<h2>Generate Marketing Campaign</h2>
+<div class="hero">
 
-<form action="/generate_campaign" method="post">
+<h1>AI-Powered Marketing Suite</h1>
 
-    <label>Product:</label>
-    <input type="text" name="product" required><br><br>
+<p>Generate campaigns, sales pitches and qualify leads using AI</p>
 
-    <label>Target Audience:</label>
-    <input type="text" name="audience" required><br><br>
+<button onclick="location.href='/campaign'">
+GET STARTED NOW
+</button>
 
-    <label>Platform:</label>
-    <input type="text" name="platform" required><br><br>
+</div>
 
-    <button type="submit">Generate Campaign</button>
+<div class="cards">
 
-</form>
+<div class="card">
+<h3>Campaign Generator</h3>
+<p>Create marketing campaigns tailored to your audience.</p>
+<a href="/campaign">Open</a>
+</div>
 
-<hr>
+<div class="card">
+<h3>Sales Pitch Creator</h3>
+<p>Create personalized product pitches.</p>
+<a href="/pitch">Open</a>
+</div>
 
+<div class="card">
+<h3>Lead Qualifier</h3>
+<p>Score leads using AI logic.</p>
+<a href="/lead">Open</a>
+</div>
 
-<!-- Sales Pitch Generator -->
-<h2>Generate AI Sales Pitch</h2>
-
-<form action="/generate_pitch" method="post">
-
-    <label>Product:</label>
-    <input type="text" name="product" required><br><br>
-
-    <label>Customer Persona:</label>
-    <input type="text" name="customer" required><br><br>
-
-    <button type="submit">Generate Pitch</button>
-
-</form>
-
-<hr>
-
-
-<!-- Lead Scoring -->
-<h2>Lead Scoring</h2>
-
-<form action="/lead_score" method="post">
-
-    <label>Lead Name:</label>
-    <input type="text" name="name" required><br><br>
-
-    <label>Budget:</label>
-    <input type="text" name="budget" required><br><br>
-
-    <label>Need:</label>
-    <input type="text" name="need" required><br><br>
-
-    <label>Urgency:</label>
-    <input type="text" name="urgency" required><br><br>
-
-    <button type="submit">Score Lead</button>
-
-</form>
+</div>
 
 </body>
 </html>
