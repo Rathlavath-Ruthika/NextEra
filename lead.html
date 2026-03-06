@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lead Qualifier</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="navbar">
+<div>MarketAI Suite</div>
+</div>
+
+<div class="form-box">
+
+<h2>Lead Qualifier</h2>
+
+<form method="POST">
+
+<input name="name" placeholder="Lead Name">
+
+<input name="budget" placeholder="Budget">
+
+<input name="need" placeholder="Business Need">
+
+<input name="urgency" placeholder="Urgency Level">
+
+<button type="submit">Analyze Lead</button>
+
+</form>
+
+{% if result %}
+<div class="result">{{result}}</div>
+{% endif %}
+
+</div>
+
+</body>
+</html>
